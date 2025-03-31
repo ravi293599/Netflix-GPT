@@ -1,6 +1,8 @@
 # Netflix GPT
  It is a netflix type movie gallery application having lots of movies and we can see it by clicking on the movie tab. we can also use GPT for search for a movie using gpt.
 
+# Checkout the Live Link
+https://movieflix-ravi.netlify.app/
  # Features
  - Login/Sign Up
     - Sign In/Sign up Form
