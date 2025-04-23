@@ -2,32 +2,32 @@ import { Link } from "react-router-dom"
 const Footer = () =>{
     return(
         <>
-        <footer className="bg-stone-900 text-white px-24 py-5">
+        <footer className="bg-[#0f0f0f] text-white px-4 py-2 lg:px-24 lg:py-5">
             <p>Questions? Call 000-800-919-1743</p>
-            <div className="py-8">
+            <div className="py-4 lg:py-8">
                 <ul className="flex flex-wrap gap-y-3">
-                    <li className="w-1/4"><Link to="/">FAQ</Link></li>
-                    <li className="w-1/4"><Link to="/">Help Center</Link></li>
-                    <li className="w-1/4"><Link to="/">Account</Link></li>
-                    <li className="w-1/4"><Link to="/">Media Center</Link></li>
-                    <li className="w-1/4"><Link to="/">Investor Relations</Link></li>
-                    <li className="w-1/4"><Link to="/">Jobs</Link></li>
-                    <li className="w-1/4"><Link to="/">
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">FAQ</Link></li>
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">Help Center</Link></li>
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">Account</Link></li>
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">Media Center</Link></li>
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">Investor Relations</Link></li>
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">Jobs</Link></li>
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">
                     Ways to Watch</Link></li>
-                    <li className="w-1/4"><Link to="/">
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">
                     Terms of Use</Link></li>
-                    <li className="w-1/4"><Link to="/">Privacy</Link></li>
-                    <li className="w-1/4"><Link to="/">
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">Privacy</Link></li>
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">
                     Cookie Preferences</Link></li>
-                    <li className="w-1/4"><Link to="/">
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">
                     Corporate Information</Link></li>
-                    <li className="w-1/4"><Link to="/">
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">
                     Contact Us</Link></li>
-                    <li className="w-1/4"><Link to="/">
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">
                     Speed Test</Link></li>
-                    <li className="w-1/4"><Link to="/">
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">
                     Legal Notices</Link></li>
-                    <li className="w-1/4"><Link to="/">
+                    <li className="w-1/2 lg:w-1/4"><Link to="/">
                     Only on Netflix</Link></li>
                 </ul>
             </div>

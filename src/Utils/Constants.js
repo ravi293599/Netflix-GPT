@@ -57,3 +57,26 @@ export const accordianData = [
         para: "The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space. Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see."
     }
 ]
+export const API_OPTION = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2Mjk1NDg4OWU2YmJmZDA4ODgyMTgwYjMwZmY2NGFjZiIsIm5iZiI6MTc0MzM0MTY0NC43MDMsInN1YiI6IjY3ZTk0ODRjYWY3NTJhM2IyNGY2ZWRjNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fNJLL1EBySZ2bW36CbMnHz5SSt5dRYOPBqZMbtS0dJo'
+  }
+};
+// export const nowPlayingMovieURL = "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+export const nowPlayingMovieURL = "https://api.themoviedb.org/3/movie/now_playing?page=1";
+export const nowPopularMovieURL = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
+export const topRatedMoviesURL = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
+export const upcomingMoviesURL = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
+export const trendingMoviesURL = "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
+export const popularTvShowURL = "https://api.themoviedb.org/3/tv/popular?language=en-US&page=1";
+export const movieImageURL = "https://image.tmdb.org/t/p/w500"
+
+
+// Multilingual data
+export const Supported_Languages = [
+    {identifier: "en", name: "English"},
+    {identifier: "hindi", name: "Hindi"},
+    {identifier: "spanish", name: "Spanish"},
+]

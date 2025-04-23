@@ -11,6 +11,14 @@
         - Trailer in Background
         - Title and Description
         - Movie Suggestion * N
+- Browse Page
+    - Main container
+     - video background
+     - Title of video
+     - details and button to play movie
+    - Secondary container
+     - rows with movie details * n
+      - movie cards * n
 - NetflixGPT
     - Search Bar
     - Movie Suggestions

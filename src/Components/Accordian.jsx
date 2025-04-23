@@ -7,8 +7,8 @@ const Accordian = ({data}) =>{
     }
     return(
         <>
-            <div className='bg-gray-600 p-4 border border-slate-700 transition-all duration-150 ease-in-out rounded-lg cursor-pointer' onClick={handleAccordian}>
-                <div className='flex justify-between items-center text-xl font-semibold'>{data.title} <span className='text-2xl'>{accordianActive?<IoIosArrowUp />:<IoIosArrowDown />} </span></div>
+            <div className='bg-[#ffffff1a] p-2 border border-[#ffffff0a] transition-all duration-150 ease-in-out rounded-lg cursor-pointer lg:p-4 hover:bg-[#ffffff33]' onClick={handleAccordian}>
+                <div className='flex justify-between items-center text-base font-semibold lg:text-xl'>{data.title} <span className='text-2xl'>{accordianActive?<IoIosArrowUp />:<IoIosArrowDown />} </span></div>
                 {accordianActive && <div className='text-normal mt-2'>{data.para}</div>}
               </div>
         </>

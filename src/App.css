@@ -2,6 +2,22 @@
 @theme {
     --my-padding: 50px
   } */
+  * {
+    scrollbar-color: #e1e1e1 transparent;
+    scrollbar-width: thin;
+}
+
+    *::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background: #e1e1e1;
+    }
 .text-stroke-2 {
   -webkit-text-stroke: 2px #fff;
 }
@@ -21,9 +37,130 @@
   visibility: visible;
   transform: translateY(-5px);
 }
+.bg-video{
+  height: -webkit-fill-available;
+}
 /* .profile-pic:hover +.login-details{
   opacity: 1;
   visibility: visible;
   transform: translateY(-5px);
 
 } */
+
+.my-class{
+  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.90) 31.45%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.55) 84.5%);
+}
+.main-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.first-div{
+  background: url(https://assets.nflxext.com/ffe/siteui/vlv3/fc2c345e-5991-4917-be24-cd328b62cc3f/web_tall_panel/IN-en-20250414-TRIFECTA-perspective_0f1fb403-6efb-4223-8f10-cfd1a902f22c_large.jpg) 50% center / cover no-repeat;
+  transition: background-image 0.2s ease-in-out;
+  filter: blur(16px);
+  position: absolute;
+  width: 100%;
+  opacity: 0.16;
+  mask-image: linear-gradient(rgb(217, 217, 217) 78.62%, rgba(115, 115, 115, 0) 100%);
+  height: 87.5rem;
+  box-sizing: border-box;
+}
+.second-div {
+  opacity: 75%;
+  background: radial-gradient(92.16% 100% at 49.87% 0%, rgba(247, 99, 107, 0.3) 19.86%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  height: 75rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.third-div {
+  background: radial-gradient(50% 100% at 50% 0%, rgba(44, 66, 156, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  height: 75rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.header-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8000) 0.000%, rgba(0, 0, 0, 0.7889) 8.333%, rgba(0, 0, 0, 0.7556) 16.67%, rgba(0, 0, 0, 0.7000) 25.00%, rgba(0, 0, 0, 0.6222) 33.33%, rgba(0, 0, 0, 0.5222) 41.67%, rgba(0, 0, 0, 0.4000) 50.00%, rgba(0, 0, 0, 0.2778) 58.33%, rgba(0, 0, 0, 0.1778) 66.67%, rgba(0, 0, 0, 0.1000) 75.00%, rgba(0, 0, 0, 0.04444) 83.33%, rgba(0, 0, 0, 0.01111) 91.67%, rgba(0, 0, 0, 0.000) 100.0%);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.above-fold {
+  -webkit-filter: drop-shadow(24px 32px 24px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(24px 32px 24px rgba(0, 0, 0, 0.6));
+}
+.mask-image{
+  -webkit-mask-image: radial-gradient(103% 12% at 50% 102%, transparent 50%, white 51%);
+  mask-image: radial-gradient(103% 12% at 50% 102%, transparent 50%, white 51%);
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 20px 20px 16px 16px;
+}
+.mask-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: radial-gradient(at top left, rgba(255, 255, 255, 0.15) 25%, transparent 70%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask-composite: exclude;
+  mask-composite: exclude;
+  z-index: 100;
+  pointer-events: none;
+}
+.main-container{
+  position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.hero-wrap{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(180deg, #fff 71.48%, rgba(255, 255, 255, 0.4) 100%);
+  mask-image: linear-gradient(180deg, #fff 71.48%, rgba(255, 255, 255, 0.4) 100%);
+}
+.hero-container{
+  background: rgba(249, 146, 151, 0.2);
+  height: 100%;
+}
+.hero-content{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+}
+.empty-div{
+  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.90) 31.45%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.55) 84.5%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  box-sizing: border-box;
+}
+.hero-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+}
