@@ -80,5 +80,3 @@ export const Supported_Languages = [
     {identifier: "hindi", name: "Hindi"},
     {identifier: "spanish", name: "Spanish"},
 ]
-
-export const OPENAI_KEY = "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";
