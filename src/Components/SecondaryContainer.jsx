@@ -7,10 +7,10 @@ const SecondaryContainer = () => {
   const showData = useSelector(store => store.TVshows);
   console.log(movieData.popularTVServies);
   return (
-    <div className='p-10 bg-black text-white'>
+    <div className='p-4 bg-black text-white lg:p-10'>
       {
         movieData && 
-        <div className='-mt-52 relative z-20'>
+        <div className='relative flex flex-col gap-2 lg:gap-3 z-20 lg:-mt-52'>
         <MovieList title="Now Playing Movies" movies={movieData.nowPlayingMovies} />
         <MovieList title="Most Popular Movies" movies={movieData.popularMovies} />
         <MovieList title="Top Rated Movies" movies={movieData.topRatedMovies} />

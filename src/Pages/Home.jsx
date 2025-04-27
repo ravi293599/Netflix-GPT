@@ -9,7 +9,7 @@ import usePopularMovies from "../hooks/usePopularMovies";
 const Home = () => {
   usePopularMovies();
   const trending = useSelector((store) => store.movies?.popularMovies);
-  console.log(trending);
+  // console.log(trending);
   return (
     <div className="relative">
       <div className="bg-[#0f0f0f]">
@@ -19,21 +19,21 @@ const Home = () => {
           <div className="third-div"></div>
         </div>
         <Header />
-        <div className="px-12">
+        <div className="lg:px-12">
           <div className="relative above-fold">
             <div className="mask-image">
-              <div class="main-container">
-                <div class="hero-wrap">
-                  <div class="hero-container">
-                    <div data-uia="hero-content-card-vlv" class="hero-content">
-                      <div dir="ltr" class="empty-div"></div>
+              <div className="main-container">
+                <div className="hero-wrap">
+                  <div className="hero-container">
+                    <div data-uia="hero-content-card-vlv" className="hero-content">
+                      <div dir="ltr" className="empty-div"></div>
                       <img src="https://assets.nflxext.com/ffe/siteui/vlv3/fc2c345e-5991-4917-be24-cd328b62cc3f/web_tall_panel/IN-en-20250414-TRIFECTA-perspective_0f1fb403-6efb-4223-8f10-cfd1a902f22c_large.jpg" srcset="https://assets.nflxext.com/ffe/siteui/vlv3/fc2c345e-5991-4917-be24-cd328b62cc3f/web_tall_panel/IN-en-20250414-TRIFECTA-perspective_0f1fb403-6efb-4223-8f10-cfd1a902f22c_large.jpg 2000w, https://assets.nflxext.com/ffe/siteui/vlv3/fc2c345e-5991-4917-be24-cd328b62cc3f/web_tall_panel/IN-en-20250414-TRIFECTA-perspective_0f1fb403-6efb-4223-8f10-cfd1a902f22c_medium.jpg 1279w, https://assets.nflxext.com/ffe/siteui/vlv3/fc2c345e-5991-4917-be24-cd328b62cc3f/web_tall_panel/IN-en-20250414-TRIFECTA-perspective_0f1fb403-6efb-4223-8f10-cfd1a902f22c_small.jpg 959w" alt="" aria-hidden="true" className="hero-img" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="text-center rounded-3xl pb-28 relative">
+            <div className="text-center rounded-3xl pb-14 relative lg:pb-28">
               <div className="text-white pt-10 z-10 relative lg:pt-40">
                 <h1 className="text-3xl leading-8 font-bold md:text-4xl md:leading-5 xl:text-6xl lg:leading-[70px]">
                   Unlimited movies, TV <br />
@@ -46,13 +46,13 @@ const Home = () => {
                   Ready to watch? Enter your email to create or restart your
                   membership.
                 </p>
-                <div className="flex gap-3 mt-3 items-center justify-center">
+                <div className="flex gap-5 px-3 flex-col mt-3 items-center justify-center lg:flex-row lg:px-0 lg:gap:3">
                   <input
                     type="email"
                     placeholder="Email address"
-                    className="p-4 w-[28%] outline-none text-white bg-stone-500/60 rounded-full border border-[#808080b3]"
+                    className="p-4 w-full outline-none text-white bg-stone-500/60 rounded-full border border-[#808080b3] lg:w-[28%]"
                   />
-                  <button className="py-3 pl-6 pr-12 text-xl font-medium text-white bg-[#e50914] rounded-full relative lg:text-2xl hover:bg-[#96080f] before:absolute before:h-[14px] before:w-[3px] before:bg-white before:-rotate-45 before:right-[20px] before:top-[18px] after:absolute after:h-[14px] after:w-[3px] after:bg-white after:rotate-45 after:right-[20px] after:bottom-[16px]">
+                  <button className="py-3 pl-6 pr-12 text-xl font-medium text-white bg-[#e50914] rounded-full relative lg:text-2xl hover:bg-[#96080f] before:absolute before:h-[12px] before:w-[3px] before:bg-white before:-rotate-45 before:right-[20px] before:top-[18px] after:absolute after:h-[12px] after:w-[3px] after:bg-white after:rotate-45 after:right-[20px] after:bottom-[16px] lg:before:h-[14px] lg:after:h-[14px]">
                     Get Started
                   </button>
                 </div>
@@ -75,7 +75,7 @@ const Home = () => {
                               className="w-[250px] rounded-3xl"
                               src={movieImageURL + trend.poster_path}
                             />
-                            <span className="absolute text-2xl text-stroke-2 text-black font-black top-4 -left-6 stroke-white stroke-2 text-shadow md:text-6xl lg:text-7xl">
+                            <span className="absolute text-5xl text-stroke-2 text-black font-black top-4 -left-6 stroke-white stroke-2 text-shadow md:text-6xl lg:text-7xl">
                               {i + 1}
                             </span>
                           </div>

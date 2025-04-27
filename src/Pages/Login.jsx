@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import { addUser } from '../Utils/Store/UserSlice';
 import { MainImage,Avtar } from '../Utils/Constants';
 
-const Login = ({setIsAuthenticated}) => {
+const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isSignUp, setSignUp] = useState(false);
@@ -43,8 +43,8 @@ const Login = ({setIsAuthenticated}) => {
            const {uuid,email,displayName,photoURL} = auth.currentUser;
           dispatch(addUser({uuid: uuid, email: email, displayName: displayName,photoURL:photoURL}));
           console.log(user);
-          navigate("/browse")
-          setIsAuthenticated(true);
+          // navigate("/browse")
+          localStorage.setItem("auth", 'true');
         })
         .catch((error)=>{
           //Error Handling
@@ -63,7 +63,7 @@ const Login = ({setIsAuthenticated}) => {
         //Signed In Logic
         const user = userCredential.user;
         console.log(user);
-        setIsAuthenticated(true);
+        localStorage.setItem("auth", 'true');
         navigate("/browse")
       })
       .catch((error)=>{
@@ -78,8 +78,8 @@ const Login = ({setIsAuthenticated}) => {
     <div className={`login-wrap relative bg-[url(${MainImage})] bg-no-bg-no-repeat bg-cover after:w-full after:top-0 after:bottom-0 after:h-full after:absolute after:bg-black/40`}>
        {/* < div className='bg-slate-800 bg-gradient-to-t from-black'> */}
       <Header />
-      <div className="flex align-center justify-center z-10 relative pb-16">
-        <form className='flex flex-col w-[500px] p-16 bg-black/80 rounded-lg' onClick={(e) => e.preventDefault()}>
+      <div className="flex align-center justify-center login-form relative pb-4 lg:pb-16">
+        <form className='flex flex-col w-[500px] p-5 bg-black/80 rounded-lg lg:p-16' onClick={(e) => e.preventDefault()}>
             <h2 className='text-white text-3xl font-bold mb-8'>{isSignUp?"Sign Up":"Sign In"}</h2>
             {isSignUp && <input type="text" placeholder='Enter name' ref={fullname} className='p-4 mb-4 bg-stone-500/30 border text-white border-[#808080b3] border-solid rounded-lg' />}
             <input type="text" placeholder='Email or mobile number' ref={email} className='p-4 mb-4 bg-stone-500/30 border text-white border-[#808080b3] border-solid rounded-lg' />

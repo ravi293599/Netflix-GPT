@@ -46,7 +46,9 @@
   transform: translateY(-5px);
 
 } */
-
+.login-form{
+  z-index: 1;
+}
 .my-class{
   background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.90) 31.45%, rgba(0, 0, 0, 0.7) 75%, rgba(0, 0, 0, 0.55) 84.5%);
 }
