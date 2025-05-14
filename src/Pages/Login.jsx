@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import { addUser } from '../Utils/Store/UserSlice';
 import { MainImage,Avtar } from '../Utils/Constants';
 
-const Login = () => {
+const Login = ({setIsAuthenticated}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isSignUp, setSignUp] = useState(false);
@@ -42,7 +42,6 @@ const Login = () => {
           //Profile Updated
            const {uuid,email,displayName,photoURL} = auth.currentUser;
           dispatch(addUser({uuid: uuid, email: email, displayName: displayName,photoURL:photoURL}));
-          console.log(user);
           // navigate("/browse")
           localStorage.setItem("auth", 'true');
         })
@@ -62,9 +61,9 @@ const Login = () => {
       .then((userCredential)=>{
         //Signed In Logic
         const user = userCredential.user;
-        console.log(user);
         localStorage.setItem("auth", 'true');
         navigate("/browse")
+        setIsAuthenticated(true)
       })
       .catch((error)=>{
         const errorCode = error.code;

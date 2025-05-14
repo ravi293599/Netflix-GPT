@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Login from "../Pages/Login"
 import Browse from "../Pages/Browse"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -6,8 +6,7 @@ import Home from "../Pages/Home"
 import ProtectedRoute from './ProtectedRoute'
 
 const Body = () => {
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // console.log(isAuthenticated);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const appRouter = createBrowserRouter([
         {
@@ -16,25 +15,25 @@ const Body = () => {
         },
         {
             path: "/login",
-            element: <Login />
-        },
-        {
-          path: '/browse',
-          element: (
-            <ProtectedRoute>
-              <Browse />
-            </ProtectedRoute>
-          ),
+            element: <Login setIsAuthenticated={setIsAuthenticated} />
         },
         // {
-        //   element: <ProtectedRoute isAuthenticated={isAuthenticated} />,
-        //   children: [
-        //     {
-        //       path: "/browse",
-        //       element: <Browse />
-        //     }
-        //   ]
-        // }
+        //   path: '/browse',
+        //   element: (
+        //     <ProtectedRoute isAuthenticated={isAuthenticated}>
+        //       {isAuthenticated && <Browse />}
+        //     </ProtectedRoute>
+        //   ),
+        // },
+        {
+          element: <ProtectedRoute isAuthenticated={isAuthenticated} />,
+          children: [
+            {
+              path: "/browse",
+              element: <Browse />
+            }
+          ]
+        }
         // {
         //     path: "/browse",
         //     element: <Browse />
