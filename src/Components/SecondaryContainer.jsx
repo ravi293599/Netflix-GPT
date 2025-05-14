@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux'
 const SecondaryContainer = () => {
   const movieData = useSelector(store => store.movies);
   const showData = useSelector(store => store.TVshows);
-  console.log(movieData.popularTVServies);
   return (
     <div className='p-4 bg-black text-white lg:p-10'>
       {

@@ -15,12 +15,10 @@ const GPTSearchBar = () => {
       return json.results;
     }
     const handleGPTSearch = async() =>{
-      console.log(searchText.current.value);
       const searchedData = await searchMovieTMDB(searchText.current.value);
       const filteredData = searchedData.filter((movie) => movie.poster_path != null)
       dispatch(addSearchedMovies(filteredData));
       dispatch(addSearchValue(searchText.current.value));
-      console.log(filteredData());
       //Make an GPT API call to get the desired movie result
       // const gptQuery = "Act as a Movie Recomandation System and suggest some movies for the query : " + searchText.current.value + 
       // ". only give me name of 10 movies, comma seperated like the example given ahead. Example: Dhoom,Raaz,Golmaal,Saavan,Kisana"; 

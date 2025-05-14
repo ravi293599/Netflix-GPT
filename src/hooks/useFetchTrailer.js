@@ -5,7 +5,6 @@ import { addMovieTrailer } from '../Utils/Store/MovieSlice';
 
 const useFetchTrailer = ({movie_id}) => {
     const dispatch = useDispatch();
-    console.log(movie_id)
     //const movieURL = "https://api.themoviedb.org/3/movie/950387/videos?language=en-US"
     const movieURL = `https://api.themoviedb.org/3/movie/${movie_id}+"/videos?language=en-US"`;
     const getTrailer = async () =>{
