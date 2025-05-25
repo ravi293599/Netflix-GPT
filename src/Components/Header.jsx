@@ -47,7 +47,7 @@ const Header = () => {
           <Link to="/"><img alt='logo' className=" my-filter w-[100px] lg:w-[150px]" src={logo} /></Link>
         </div>
         {
-          user && 
+          (user && ["/browse"].includes(path))&&
          <div className='flex items-center gap-3'>
           {GPTOption && <select className='border py-1 appearance-none pr-5 pl-3 border-white outline-none rounded-md bg-black text-white relative before:absolute before:w-[1px] before:h-[3px] before:bg-white before:right-0 before:top-0' onChange={handleLanguageChange}>
                 {Supported_Languages.map(
@@ -83,7 +83,7 @@ const Header = () => {
                   lang => <option key={lang.identifier} name={lang.identifier}>{lang.name}</option>
                 )}
             </select>
-            <button className='font-medium py-1 px-3 text-white bg-[#e50914] rounded-md ' onClick={handleSignIn}>Sign In</button>
+            <button className='font-medium py-1 px-3 text-white bg-[#e50914] rounded-md ' onClick={handleSignIn}>{user ? "Go to Browse" : "Sign In"}</button>
           </div>
         }
     </header>
